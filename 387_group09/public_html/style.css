@@ -1,0 +1,267 @@
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* general styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #e4e0e0;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header styles */
+.banner {
+  background-color: #14213d;
+  color: #fff;
+  padding: 20px;
+}
+
+.banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner__text {
+  margin-left: 20px;
+}
+
+.banner__text strong {
+  font-size: 1.2rem;
+}
+
+.banner__login {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.banner__login:hover {
+  opacity: 0.8;
+}
+
+.banner__login span {
+  font-size: 2rem;
+}
+
+/* login styles */
+.login__tab {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login_title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.username input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.username input:focus {
+  outline: none;
+  border-color: #14213d;
+}
+
+input[type="submit"] {
+  background-color: #14213d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0d1829;
+}
+
+.signin__help {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+.signin__help a {
+  color: #14213d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin__help a:hover {
+  text-decoration: underline;
+}
+
+/* Style the overall page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Style the account tab container */
+.accountTab {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the account title */
+.accountTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the form labels */
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style the form inputs */
+form input[type="email"],
+form input[type="password"],
+form input[type="string"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Style the form buttons */
+form input[type="submit"] {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+/* Style the form buttons on hover */
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Style the favorited listings */
+.favoriteListings {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Style the individual favorite listings */
+.favoriteListing {
+  margin-top: 10px;
+}
+
+/* Style the material icons */
+.material-icons {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/*---------------CREATE LISTING PAGE---------------- */
+.newListing {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.listingText {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2684ff;
+}
+
+form input[type="submit"] {
+  background-color: #2684ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0066cc;
+}
+
+.material-symbols-outlined {
+  font-size: 28px;
+  margin-left: 10px;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Banner --><?php
+      include 'Header.php';
+    ?>
+    <!-- Login -->
+    <div class="login__tab">
+      <div class="login_title">
+        <strong>Sign In</strong>
+      </div>
+      <div class="username">
+        <form action="temp.php" method="post">
+          Enter Username or Email:
+          <input type="string" name="username" />
+
+          Password: <input type="string" name="password" />
+
+          <input type = "submit" value = "Sign in" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
