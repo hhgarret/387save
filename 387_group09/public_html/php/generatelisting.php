@@ -41,6 +41,9 @@ $Location = $_POST['location'];
 $Salary = $_POST['salary'];
 $url = $_POST['application'];
 $Desc = $_POST['opQual'];
+if(!isset($url) || $url == ""){
+	$url = "blank";
+}
 if($_POST['reccuring'] == "Yes"){
 	$recurring = 1;
 }else{

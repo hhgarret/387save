@@ -150,7 +150,7 @@ while($row = $result -> fetch_row()){
 		}else if((($finfos[$i] -> flags) >> 3) % 2 == 1){ #flag bit of 8 is MULTIPLE_KEY_FLAG
 			echo(" readonly");
 		}
-		echo(" value = '".$row[$i]."' name = ".($finfos[$i]->name)); 
+		echo(" value = '".$row[$i]."' name = '".($finfos[$i]->name)."'"); 
 
 		echo("></div>");
 	}

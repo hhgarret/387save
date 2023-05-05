@@ -80,15 +80,16 @@ if($action == "Update"){
 	echo("<br />");
 	$sql = "Delete from $input where";
 	for($i = 0; $i < sizeof($finfos); $i++){
-		if($i != sizeof($finfos)-1){
+		if( (($finfos[$i]->flags & 8)  + ($finfos[$i]->flags & 4) + ($finfos[$i]->flags & 2)) != 0){
 		$sql = $sql." ".$finfos[$i]->name."= ? AND";
-		}else{
-			$sql = $sql." ".$finfos[$i]->name."= ?";
 		}
 	}
+	$sql = substr($sql, 0, -4);
 	$args = array();
 	foreach($finfos as $finfo){
+		if( (($finfo->flags & 8)  + ($finfo->flags & 4) + ($finfo->flags & 2)) != 0){
 		$args[] = $_POST[$finfo->name];
+		}
 	}
 	echo($sql);
 	echo("<br />");
