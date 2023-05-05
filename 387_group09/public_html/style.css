@@ -265,3 +265,17 @@ form input[type="submit"]:hover {
   margin-left: 10px;
 }
 
+a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}

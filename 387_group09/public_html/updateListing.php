@@ -44,10 +44,11 @@ tr:nth-child(even){
     background-color: $f2f2f2;
 }
 .table{
-    display: table;
+    /* display: table; */
 }
 .table>* {
     display: table-row;
+	
     }
 .table>*>*{
     display:table-cell;
@@ -58,6 +59,10 @@ tr:nth-child(even){
   <body>
     <?php
     include 'header.php';
+
+	?>
+	<?php
+    include 'footer.php';
 
 	?>
 <?php
@@ -154,5 +159,6 @@ while($row = $result -> fetch_row()){
 }
 }
     ?>
+	
   </body>
 </html>

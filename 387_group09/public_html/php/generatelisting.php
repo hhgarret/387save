@@ -39,7 +39,7 @@ $StartDate = $_POST['opStartDate'];
 $EndDate = $_POST['opEndDate'];
 $Location = $_POST['location'];
 $Salary = $_POST['salary'];
-$url = "blank";
+$url = $_POST['application'];
 $Desc = $_POST['opQual'];
 if($_POST['reccuring'] == "Yes"){
 	$recurring = 1;

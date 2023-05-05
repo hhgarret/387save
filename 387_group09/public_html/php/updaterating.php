@@ -6,7 +6,8 @@ $rating = $_GET['rating'];
 $sql = "Replace into Ratings VALUES (?, ?, ?, ' ')";
 $result = $conn -> execute_query($sql, [$listingid, $userid, $rating]);
 if($result != false){
-	echo("Successfully inserted values ".$listingid.", ".$userid.", ".$rating);
+	echo("Your rating of ".$rating." has been added");
+	// echo("Successfully inserted values ".$listingid.", ".$userid.", ".$rating);
 }else{
 	echo("Failed to insert values");
 }

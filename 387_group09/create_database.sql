@@ -36,9 +36,11 @@ CREATE TABLE Listings (
     EndDate date NOT NULL,
     Location varchar(100) NOT NULL,
     Salary double(15,2)  NOT NULL,
-    url varchar(100)  NULL,
+    url varchar(100)  NULL DEFAULT "blank",
     Description text  NOT NULL,
     recurring bool  NOT NULL,
+    reports int NULL DEFAULT 0,
+    archived bool NULL DEFAULT 0,
     CONSTRAINT Listings_pk PRIMARY KEY (ListingID)
 );
 
@@ -77,6 +79,8 @@ ALTER TABLE Applications ADD CONSTRAINT Applications_Listings FOREIGN KEY Applic
 -- Reference: Favorites_Users (table: Favorites)
 ALTER TABLE Favorites ADD CONSTRAINT Favorites_Users FOREIGN KEY Favorites_Users (UserID)
     REFERENCES Users (UserID)  ON DELETE CASCADE;
+ALTER TABLE Favorites ADD CONSTRAINT Favorites_Listings FOREIGN KEY Favorites_Listings (ListingID)
+    REFERENCES Listings (ListingID)  ON DELETE CASCADE;
 
 -- Reference: Listings_Positions (table: Listings)
 ALTER TABLE Listings ADD CONSTRAINT Listings_Positions FOREIGN KEY Listings_Positions (PositionID)
@@ -89,6 +93,8 @@ ALTER TABLE Listings ADD CONSTRAINT Listings_Users FOREIGN KEY Listings_Users (P
 -- Reference: Ratings_Listings (table: Ratings)
 ALTER TABLE Ratings ADD CONSTRAINT Ratings_Listings FOREIGN KEY Ratings_Listings (ListingID)
     REFERENCES Listings (ListingID)  ON DELETE CASCADE;
+ALTER TABLE Ratings ADD CONSTRAINT Ratings_User FOREIGN KEY Ratings_User (UserID)
+    REFERENCES Users (UserID)  ON DELETE CASCADE;
 
 
 

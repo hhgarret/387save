@@ -36,6 +36,8 @@
           to
           <input type="date" name="opEndDate" required>
 
+
+
           <!-- Recurring? -->
           Is this opportunity recurring?
           <label for="Yes">Yes
@@ -65,7 +67,7 @@
 
           <!-- Company's Link to Apply -->
           <label for="application">Link to Apply:</label>
-          <input type="url" name="application" > 
+          <input type="url" id="urlll" name="application" > 
 
           <!-- Company Description
             <p><label for="comDesc">Company Description:</label></p>

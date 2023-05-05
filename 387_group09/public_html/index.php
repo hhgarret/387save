@@ -49,6 +49,27 @@ button:hover {
                 padding-right: 0;
             }
             #checked ~ label, #checked { color: #FFC700;  } 
+
+            #showButton,
+            #createButton,
+            #updateButton,
+            #deleteButton,
+            #archiveButton {
+              display: inline-flex;
+              flex-direction: row;
+              background-color: #E8E8E8;
+              padding: 15px;
+              margin-left: 20px;
+              margin-top: 20px;
+              border: 1px solid #ccc;
+              border-radius: 17px;
+              
+            }
+
+            .showButtons {
+              display: inline;
+            }
+
     </style>
 
   </head>
@@ -57,9 +78,28 @@ button:hover {
 <?php
       include 'header.php';
     ?>
-    <button class="showListings" type="button">
+    <center>
+    <div class="showButtons">
+    <button class="showListings" id="showButton" type="button">
         <a href="listings.php"> Show All Listings </a> 
     </button>
+    
+    <button class="create_listing" id="createButton" type="button">
+        <a href="createListing.php"> Create Listing </a> 
+    </button>
+    
+    <button class="update_listing" id="updateButton" type="button">
+        <a href="updateListing.php"> Update Listing </a> 
+    </button>
+    
+    <button class="delete_listing" id="deleteButton" type="button">
+              <a href="deleteListing.php"> Delete Listing </a>
+          </button>
+          <button class="archiveListings" id="archiveButton" type="button">
+          <a href="archive.php"> View Archive </a> 
+      </button>
+    </div>
+          </center>
     <!-- Listings Buttons -->
     <!-- <div class="listings">
       <div class="listings__content">
@@ -86,6 +126,7 @@ button:hover {
     align-items: center;
     padding: 60px;
     height: 100%;
+    margin-top: -40px;
   }
   .box {
     width: 1500px;

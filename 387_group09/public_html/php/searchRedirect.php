@@ -4,12 +4,16 @@
 		$sql = "Select ListingID from Listings where Name like ?";
 		$result = $conn -> execute_query($sql, ['%'.$_POST['search'].'%']);
 		if(!$result){
-			echo("Failed to search!");
-			return -1;
+			$_SESSION['message'] = "Failed to Find Listing";
+			header("Location: ../listings.php");
+		
+		}else if($result -> num_rows == 0){
+			$_SESSION['message'] = "Failed to Find Listing";
+			header("Location: ../listings.php");
+		}else{
+			$row = $result -> fetch_row();
+			$id = $row[0];
+			header("Location: ../listingInfo.php?listingid=".$id);
 		}
-		$row = $result -> fetch_row();
-		$id = $row[0];
-		header("Location: ../listingInfo.php?listingid=".$id);
-
 	}
 ?>

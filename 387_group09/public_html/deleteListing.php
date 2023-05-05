@@ -138,7 +138,7 @@ while($row = $result -> fetch_row()){
 			echo("'number' min = '0' max = '1' step = '1'");
 		}
 		echo(" readonly");
-		echo(" value = '".$row[$i]."' name = ".($finfos[$i]->name)); 
+		echo(" value = '".$row[$i]."' name = '".($finfos[$i]->name)."'"); 
 
 		echo("></div>");
 	}

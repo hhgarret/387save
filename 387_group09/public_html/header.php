@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+    require_once("/home/group9/init.php");
+  ?>
 <head>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -61,9 +64,10 @@
   .icons {
     display: flex;
     margin-top: -2%;
-    
+    background-color: #14213d;
     justify-content: right;
     vertical-align: fixed;
+
     /* position: relative;
     
     z-index:1; */
@@ -73,6 +77,11 @@
     /* margin-right: 500px;
     display: inline-block; */
     /* align-items: center; */
+  }
+  button{
+    margin:0;
+    border: 0;
+    background: 0;
   }
   
   .banner__account {
@@ -86,12 +95,33 @@
       margin-left: auto;
       margin-right: 500px; */
       
+      
   }
+
+  /* .icons a:link,
+  a:visited {
+    text-decoration: none;
+    color: blue;
+    background-color: transparent;
+  } */
+
+  
+
+  .banner a:link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .banner a:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+  
+
 </style>
 <body>
-  <?php 
-    require_once("/home/group9/init.php");
-  ?>
+  
   <div class="banner">
     
       <div class="logo">
@@ -104,13 +134,13 @@
         
         <?php 
           echo("           ");
-          if($_SESSION['user'] != ""){
+          if(isset($_SESSION) && $_SESSION['user'] != ""){
             echo("<strong>You are signed in as ".$_SESSION['user']."</strong>");
           } else{
             echo("<strong>You are not signed in.</strong>");
           }
           $page = explode("/", $_SERVER['SCRIPT_NAME'])[2];
-          if(!isset($_SESSION['user']) && ($page == 'createListing.php' || $page == 'account.php' || $page == 'updateListing.php')){
+          if(!isset($_SESSION['user']) && ($page == 'createListing.php' || $page == 'account.php' || $page == 'updateListing.php' || $page == 'deleteListing.php' || $page == "archive.php")){
             echo("<script src='js/boottosignin.js'></script>");
           } else if($page == 'ajax.php' && $_SESSION['user'] != "admin"){
             echo("<script src='js/boottosignin.js'></script>");
@@ -133,7 +163,7 @@
               <span class="material-symbols-outlined"> <a href = "account.php"> account_circle </a> </span>
                </button>
                 <button class="banner__signOut" type="button">
-              <span class="material-symbols-outlined"> <a href = "php/signout.php" onclick="return confirm()">logout</a> </span>
+              <span class="material-symbols-outlined" id="so"> <a href = "php/signout.php" onclick="return confirm(\'Are you sure you want to signout? \')">logout</a> </span>
                 </button>');
                 if($_SESSION['user'] == "admin") {
               echo("<button class='banner__signOut' type='button'>

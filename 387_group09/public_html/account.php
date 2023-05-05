@@ -10,6 +10,24 @@
       rel="stylesheet"
     />
    <style>
+    #createButton,
+            #updateButton,
+            #deleteButton,
+            #archiveButton {
+              display: inline-flex;
+              flex-direction: row;
+              background-color: #E8E8E8;
+              padding: 10px;
+              /* margin-left: 20px; */
+              margin-top: 10px;
+              border: 1px solid #ccc;
+              border-radius: 17px;
+              
+            }
+
+            .showButtons {
+              display: inline;
+            }
     /* CSS for collapsible */
       .collapsible {
         font-family: "Helvetica Neue", Arial, sans-serif;
@@ -23,10 +41,11 @@
         border: none;
         text-align: left;
         outline: none;
+        border-radius: 17px;
       }
 
       .active, .collapsible:hover {
-        background-color: grey;
+        background-color: #D3D3D3;
       }
 
       .content {
@@ -34,6 +53,7 @@
         display: none;
         overflow: hidden;
         background-color: #f1f1f1;
+        border-radius: 17px;
       }
     </style>
   </head>
@@ -144,17 +164,21 @@
                 echo("<br />");
                 for($i = 0; $i < $numfields; $i++){
                     if($i == 0){
+                      
                         echo("<a href='listingInfo.php?listingid=".$row[0]."'>".$row[1]."</a>, ");
+                        
                         $i++;
                         
                         continue;
                     }
+                    
                     $field = $result ->fetch_field_direct($i);
                     echo($field->name.": ".$row[$i]);
                     if($i != $numfields-1){
                         echo(", ");
                     }
             }
+            echo("<br/>");
       }
 
             ?>
@@ -165,17 +189,23 @@
             <!-- My Listings -->
            <b> My Listings: </b>
            <br>
-           <button class="create_listing" type="button">
+           <div class="showButtons">
+           <button class="create_listing" id="createButton" type="button">
               <a href="createListing.php"> Create Listing </a> 
            </button>
 
-          <button class="update_listing" type="button">
+          <button class="update_listing" id="updateButton" type="button">
               <a href="updateListing.php"> Update Listing </a> 
           </button>
 
-          <button class="delete_listing" type="button">
+          <button class="delete_listing" id="deleteButton" type="button">
               <a href="deleteListing.php"> Delete Listing </a>
           </button>
+
+          <button class="archiveListings" id="archiveButton" type="button">
+          <a href="archive.php"> View Archive </a> 
+      </button>
+    </div>
           <br>
 
             <?php
@@ -199,6 +229,7 @@
                         echo(", ");
                     }
             }
+            echo("<br/>");
       }
 
             ?>

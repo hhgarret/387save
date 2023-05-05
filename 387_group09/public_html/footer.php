@@ -32,17 +32,27 @@
         color: #ffffff;
     }
 
+    footer a:link {
+    text-decoration: underline;
+    color: white;
+  }
+
+    footer a:visited {
+    text-decoration: underline;
+    color: white;
+  }
+
 </style>
 <body>
     <footer>
-        Follow Us on <a href="https://www.facebook.com/people/OTV-Job-Board/100091975899860/">Facebook<a>!
+        Follow Us on <a href="https://www.facebook.com/people/OTV-Job-Board/100091975899860/">Facebook</a>!
         <br>
         <br>
         Need help?
         <br>
         Contact Us @ Our Email: <a href = "mailto: group9@go.olemiss.edu">group9@go.olemiss.edu</a>
         <br>
-        or Refer to Our <a href="https://docs.google.com/document/d/1jTDtxSgPMHbO9oka41t4F8rrJpYfU-6cUAJCvLxooSc/edit?usp=sharing">User Manual<a>
+        or Refer to Our <a href="https://docs.google.com/document/d/1jTDtxSgPMHbO9oka41t4F8rrJpYfU-6cUAJCvLxooSc/edit?usp=sharing">User Manual</a>
         <br>
         <br>
         <hr>
